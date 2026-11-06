@@ -1,0 +1,45 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/zona_meta.gd" id="1_script"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_zona"]
+size = Vector2(76, 76)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bloqueo"]
+size = Vector2(62, 62)
+
+[node name="Puerta" type="Area2D"]
+collision_layer = 0
+collision_mask = 1
+monitoring = true
+script = ExtResource("1_script")
+
+[node name="FondoPuerta" type="ColorRect" parent="."]
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.0
+color = Color(0.64, 0.25, 0.31, 1)
+
+[node name="EtiquetaPuerta" type="Label" parent="."]
+offset_left = -43.0
+offset_top = -18.0
+offset_right = 43.0
+offset_bottom = 18.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 11
+text = "PUERTA\nBLOQUEADA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColisionZona" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_zona")
+
+[node name="Bloqueo" type="StaticBody2D" parent="."]
+collision_layer = 1
+collision_mask = 1
+
+[node name="ColisionBloqueo" type="CollisionShape2D" parent="Bloqueo"]
+shape = SubResource("RectangleShape2D_bloqueo")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,25 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/jugador.gd" id="1_jugador"]
+[ext_resource type="Texture2D" path="res://assets/player/robot1_gun.png" id="2_tex_jugador"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jugador"]
+radius = 18.0
+
+[node name="Jugador" type="CharacterBody2D"]
+motion_mode = 1
+collision_layer = 1
+collision_mask = 1
+script = ExtResource("1_jugador")
+
+[node name="SpriteJugador" type="Sprite2D" parent="."]
+texture = ExtResource("2_tex_jugador")
+
+[node name="ColisionJugador" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_jugador")
+
+[node name="BocaArma" type="Marker2D" parent="."]
+position = Vector2(28, 8)
+
+[node name="SonidoDisparo" type="AudioStreamPlayer2D" parent="."]
+volume_db = -4.0

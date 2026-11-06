@@ -1,0 +1,317 @@
+[gd_scene format=3 uid="uid://cd1bia7xd71bk"]
+
+[ext_resource type="Script" uid="uid://qbp45qw1gswr" path="res://scripts/menu_principal.gd" id="1_menu"]
+[ext_resource type="Texture2D" uid="uid://csdi7sog0u0mf" path="res://assets/enemies/zoimbie1_stand.png" id="2_zton_tex"]
+[ext_resource type="Texture2D" uid="uid://y3d4xvnk577h" path="res://assets/enemies/zoimbie1_hold.png" id="3_zint_tex"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_normal"]
+bg_color = Color(0.14, 0.16, 0.22, 1)
+border_width_left = 5
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.25, 0.78, 0.65, 1)
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+expand_margin_left = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_pressed"]
+bg_color = Color(0.95, 0.32, 0.42, 1)
+border_width_left = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+expand_margin_left = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_hover"]
+bg_color = Color(0.2, 0.23, 0.31, 1)
+border_width_left = 8
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.95, 0.32, 0.42, 1)
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+expand_margin_left = 14.0
+shadow_color = Color(1, 0.15, 0.55, 0.35)
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.11, 0.13, 0.18, 0.95)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.25, 0.78, 0.65, 0.6)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="MenuPrincipal" type="Control" unique_id=1134635127]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_menu")
+
+[node name="FondoMenu" type="ColorRect" parent="." unique_id=2106998897]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.08, 0.09, 0.13, 1)
+
+[node name="BordeSuperior" type="ColorRect" parent="." unique_id=497019064]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 6.0
+grow_horizontal = 2
+color = Color(0.95, 0.32, 0.42, 1)
+
+[node name="TituloJuego" type="Label" parent="." unique_id=1058393005]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -280.0
+offset_top = 55.0
+offset_right = 280.0
+offset_bottom = 110.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.95, 0.32, 0.42, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.75)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_font_sizes/font_size = 36
+text = "DISTRITO CERO"
+horizontal_alignment = 1
+
+[node name="SubtituloJuego" type="Label" parent="." unique_id=1662646358]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 110.0
+offset_right = 200.0
+offset_bottom = 136.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.25, 0.78, 0.65, 1)
+theme_override_font_sizes/font_size = 15
+text = "SEGUNDO PARCIAL - VIDEOJUEGOS"
+horizontal_alignment = 1
+
+[node name="LineaSeparadora" type="ColorRect" parent="." unique_id=487788880]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -140.0
+offset_top = 144.0
+offset_right = 140.0
+offset_bottom = 146.0
+grow_horizontal = 2
+color = Color(0.25, 0.78, 0.65, 0.4)
+
+[node name="EtiquetaRecord" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -290.0
+offset_top = 154.0
+offset_right = 290.0
+offset_bottom = 180.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.25, 0.78, 0.65, 1)
+theme_override_font_sizes/font_size = 13
+text = "ÚLTIMA PARTIDA: 00000     |     RÉCORD: 00000"
+horizontal_alignment = 1
+
+[node name="ContenedorBotones" type="VBoxContainer" parent="." unique_id=1887692111]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = -135.0
+offset_right = 140.0
+offset_bottom = 85.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 14
+
+[node name="BotonNivel1" type="Button" parent="ContenedorBotones" unique_id=223548638]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+text = "Nivel 1"
+
+[node name="BotonNivel2" type="Button" parent="ContenedorBotones" unique_id=897119605]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+text = "Nivel 2"
+
+[node name="BotonOpciones" type="Button" parent="ContenedorBotones" unique_id=381608877]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+text = "Opciones"
+
+[node name="BotonSalir" type="Button" parent="ContenedorBotones" unique_id=1817216736]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+text = "Salir"
+
+[node name="PanelOpciones" type="Panel" parent="." unique_id=405935542]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -140.0
+offset_right = 180.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="ContenedorOpciones" type="VBoxContainer" parent="PanelOpciones" unique_id=1246380863]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 20.0
+offset_right = -24.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+
+[node name="EtiquetaVolumen" type="Label" parent="PanelOpciones/ContenedorOpciones" unique_id=1507411614]
+layout_mode = 2
+text = "Volumen General"
+
+[node name="DeslizadorVolumen" type="HSlider" parent="PanelOpciones/ContenedorOpciones" unique_id=667285751]
+layout_mode = 2
+min_value = 0.001
+max_value = 1.0
+step = 0.05
+value = 0.801
+
+[node name="EtiquetaResolucion" type="Label" parent="PanelOpciones/ContenedorOpciones" unique_id=765998192]
+layout_mode = 2
+text = "Resolución de Pantalla"
+
+[node name="SelectorResolucion" type="OptionButton" parent="PanelOpciones/ContenedorOpciones" unique_id=1401276738]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+
+[node name="BotonVolver" type="Button" parent="PanelOpciones/ContenedorOpciones" unique_id=937589207]
+custom_minimum_size = Vector2(0, 38)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+text = "Volver"
+
+[node name="TarjetaInfo" type="Panel" parent="." unique_id=313108788]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -175.0
+offset_right = 250.0
+offset_bottom = -55.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="IconoZombieTonto" type="Sprite2D" parent="TarjetaInfo" unique_id=1465154596]
+modulate = Color(1, 0.65, 0.65, 1)
+position = Vector2(55, 60)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("2_zton_tex")
+
+[node name="TextoZombieTonto" type="Label" parent="TarjetaInfo" unique_id=12620010]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 38.0
+offset_right = 235.0
+offset_bottom = 84.0
+theme_override_colors/font_color = Color(1, 0.75, 0.75, 1)
+theme_override_font_sizes/font_size = 13
+text = "Zombie Tonto
+(Va en línea recta)"
+
+[node name="IconoZombieIntel" type="Sprite2D" parent="TarjetaInfo" unique_id=299037538]
+modulate = Color(0.55, 1, 0.65, 1)
+position = Vector2(295, 60)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("3_zint_tex")
+
+[node name="TextoZombieIntel" type="Label" parent="TarjetaInfo" unique_id=2041466912]
+layout_mode = 0
+offset_left = 330.0
+offset_top = 38.0
+offset_right = 485.0
+offset_bottom = 84.0
+theme_override_colors/font_color = Color(0.7, 1, 0.78, 1)
+theme_override_font_sizes/font_size = 13
+text = "Zombie Inteligente
+(Esquiva paredes)"
+
+[node name="PieControles" type="Label" parent="." unique_id=1797610727]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -40.0
+offset_right = 250.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.6, 0.65, 0.75, 1)
+theme_override_font_sizes/font_size = 13
+text = "Controles: WASD para moverse  |  Mouse para apuntar  |  Clic Izq. para disparar"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="ContenedorBotones/BotonNivel1" to="." method="_on_boton_nivel_1_pressed"]
+[connection signal="pressed" from="ContenedorBotones/BotonNivel2" to="." method="_on_boton_nivel_2_pressed"]
+[connection signal="pressed" from="ContenedorBotones/BotonOpciones" to="." method="_on_boton_opciones_pressed"]
+[connection signal="pressed" from="ContenedorBotones/BotonSalir" to="." method="_on_boton_salir_pressed"]
+[connection signal="value_changed" from="PanelOpciones/ContenedorOpciones/DeslizadorVolumen" to="." method="_on_deslizador_volumen_value_changed"]
+[connection signal="item_selected" from="PanelOpciones/ContenedorOpciones/SelectorResolucion" to="." method="_on_selector_resolucion_item_selected"]
+[connection signal="pressed" from="PanelOpciones/ContenedorOpciones/BotonVolver" to="." method="_on_boton_volver_pressed"]

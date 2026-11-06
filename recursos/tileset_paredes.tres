@@ -1,0 +1,14 @@
+[gd_resource type="TileSet" format=3 uid="uid://w4o7wlkbs10j"]
+
+[ext_resource type="Texture2D" uid="uid://dudoj6qof8ni" path="res://assets/environment/pared_ladrillo.png" id="1_pared"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pared"]
+texture = ExtResource("1_pared")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[resource]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_pared")
